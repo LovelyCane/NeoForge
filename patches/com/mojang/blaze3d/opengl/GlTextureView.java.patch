@@ -32,7 +32,7 @@
 +    private int createFbo(DirectStateAccess dsa, int depthid, boolean useStencil) {
          int fbo = dsa.createFrameBufferObject();
 -        dsa.bindFrameBufferTextures(fbo, this.texture().id, depthid, this.baseMipLevel(), 0);
-+        dsa.bindFrameBufferTextures(fbo, this.texture().id, depthid, 0, 0, useStencil);
++        dsa.bindFrameBufferTextures(fbo, this.texture().id, depthid, this.baseMipLevel(), 0, useStencil);
          return fbo;
      }
  
